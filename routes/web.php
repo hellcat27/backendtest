@@ -15,12 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pokemon',function(){
-    $pokemon = DB::table('pokemon')->simplePaginate(20);
-    return $pokemon;
-});
-
-Route::get('/pokemon/{id}',function($id){
-    $pokemon = DB::table('pokemon')->find($id);
-    dd($pokemon);
-});
+Route::get('/protected', function(){
+    return view('protectedtest');
+})->middleware('auth:api');
