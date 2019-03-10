@@ -44,7 +44,7 @@ Route::get('/testuserpokemon',function(){
 
 Route::middleware('auth:api')->get('userpokemon',function(Request $request){
     $userid = $request->user()->id;
-    $userpokemon = DB::table('userpokemon')->join('pokemon','pokemon.id','=','userpokemon.id')->where('userpokemon.userid','=',$userid)->select('pokemon.*')->get();
+    $userpokemon = DB::table('userpokemon')->join('pokemon','pokemon.id','=','userpokemon.pokemonid')->where('userpokemon.userid','=',$userid)->select('pokemon.*')->get();
     return $userpokemon;
 });
 
