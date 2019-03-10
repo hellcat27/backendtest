@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/protected', function(){
     return view('protectedtest');
 })->middleware('auth:api');
+
+Route::get('login', 'Auth\LoginController@invalid')->name('login');
