@@ -9,6 +9,6 @@
     <script src="main.js"></script>
 </head>
 <body>
-    
+    <h1>Pokedex Backend API</h1>
 </body>
 </html>

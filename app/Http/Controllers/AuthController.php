@@ -106,4 +106,12 @@ class AuthController extends Controller
     {
         return response()->json($request->user());
     }
+
+    /*
+    public function userpokemon(Request $request)
+    {
+        $pokemon = DB::table('pokemon')->simplePaginate(20);
+        return $pokemon;
+    }
+    */
 }

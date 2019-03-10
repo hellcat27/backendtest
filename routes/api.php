@@ -23,8 +23,8 @@ Route::get('/pokemon',function(){
 });
 
 Route::get('/pokemon/{id}',function($id){
-    $pokemon = DB::table('pokemon')->find($id);
-    dd($pokemon);
+    $pokemon = DB::table('pokemon')->where('pokemon.id','=',$id)->get();
+    return $pokemon;
 });
 
 Route::group(['prefix' => 'auth'], function () {
@@ -35,6 +35,24 @@ Route::group(['prefix' => 'auth'], function () {
         Route::get('logout', 'AuthController@logout');
         Route::get('user', 'AuthController@user');
     });
+});
+
+Route::get('/testuserpokemon',function(){
+    $userpokemon = DB::table('userpokemon')->join('pokemon','pokemon.id','=','userpokemon.id')->where('userpokemon.userid','=','1')->select('pokemon.*')->get();
+    return $userpokemon;
+});
+
+Route::middleware('auth:api')->get('userpokemon',function(Request $request){
+    $userid = $request->user()->id;
+    $userpokemon = DB::table('userpokemon')->join('pokemon','pokemon.id','=','userpokemon.id')->where('userpokemon.userid','=',$userid)->select('pokemon.*')->get();
+    return $userpokemon;
+});
+
+Route::middleware('auth:api')->post('useraddpokemon',function(Request $request){
+    $userid = $request->user()->id;
+    $pokemonid = $request->pokemonid;
+    $id = DB::table('userpokemon')->insertGetId(['userid' => $userid, 'pokemonid' => $pokemonid]);
+    return $id;
 });
 
 
