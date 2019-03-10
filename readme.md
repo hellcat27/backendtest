@@ -20,9 +20,9 @@ A raw JSON request in the body consisting of:
 }  
 Make sure the header is sending a Key of "Content-Type" with a value of "application/json".  
   
-  ![one](/1.png?raw=true)
+  ![one](/1.PNG?raw=true)
   
-  ![two](/2.png?raw=true)
+  ![two](/2.PNG?raw=true)
   
 **api/auth/login** - Login and get an authorization token  
 To use in Postman, send a post request to {hostaddress}/api/auth/login with the following:  
