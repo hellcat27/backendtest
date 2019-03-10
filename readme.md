@@ -20,9 +20,9 @@ A raw JSON request in the body consisting of:
 }  
 Make sure the header is sending a Key of "Content-Type" with a value of "application/json".  
   
-  ![](https://github.com/hellcat27/backendtest/1.png)
+  ![](https://github.com/hellcat27/backendtest/1.PNG)
   
-  ![](https://github.com/hellcat27/backendtest/2.png)
+  ![](https://github.com/hellcat27/backendtest/2.PNG)
   
 **api/auth/login** - Login and get an authorization token  
 To use in Postman, send a post request to {hostaddress}/api/auth/login with the following:  
