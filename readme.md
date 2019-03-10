@@ -1,22 +1,22 @@
-Backend test for PHP/Laravel
+Backend test for PHP/Laravel  
 
-Available HTTP requests:
-api/pokemon - Get a paginated list of all pokemon
-To use in Postman send a get request to {hostaddress}/api/pokemon
+Available HTTP requests:  
+api/pokemon - Get a paginated list of all pokemon  
+To use in Postman send a get request to {hostaddress}/api/pokemon  
 
-api/pokemon/{id} - Get a specific pokemon from the database
-To use in Postman, send a get request to {hostaddress}/api/pokemon/{id}
+api/pokemon/{id} - Get a specific pokemon from the database  
+To use in Postman, send a get request to {hostaddress}/api/pokemon/{id}  
 
-api/auth/register - Register a new account
-To use in Postman, send a post request to {hostaddress}/api/auth/register with the following:
-A raw JSON request in the body consisting of:
-{
-    "name": {user name},
-    "email": {user email},
-    "password": {user password},
-    "password_confirmation": {user password}
-}
-Make sure the header is sending a Key of "Content-Type" with a value of "application/json".
+api/auth/register - Register a new account  
+To use in Postman, send a post request to {hostaddress}/api/auth/register with the following:  
+A raw JSON request in the body consisting of:  
+{  
+    "name": {user name},  
+    "email": {user email},  
+    "password": {user password},  
+    "password_confirmation": {user password}  
+}  
+Make sure the header is sending a Key of "Content-Type" with a value of "application/json".  
 
 api/auth/login - Login and get an authorization token
 To use in Postman, send a post request to {hostaddress}/api/auth/login with the following:
