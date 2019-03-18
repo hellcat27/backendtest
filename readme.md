@@ -1,5 +1,7 @@
 ## Backend test for PHP/Laravel  
 
+Test @ http://138.68.229.67/
+
 ### Available HTTP requests:  
 **api/pokemon** - Get a paginated list of all pokemon  
 To use in Postman send a get request to {hostaddress}/api/pokemon  
