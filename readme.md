@@ -1,6 +1,6 @@
 ## Backend test for PHP/Laravel  
 
-Test @ http://138.68.229.67/
+Test @ http://138.68.229.67/ (Not currently active)
 
 ### Available HTTP requests:  
 **api/pokemon** - Get a paginated list of all pokemon  
